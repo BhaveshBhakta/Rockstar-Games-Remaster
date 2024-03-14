@@ -1,0 +1,453 @@
+@font-face {
+    font-family: Helvetica_Bold;
+    src: url(HelveticaNowDisplay-Bold.ttf);
+}
+
+@font-face {
+    font-family: Helvetica_Regular;
+    src: url(HelveticaNowDisplay-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    color: white;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#cursor-blur{
+    height: 500px;
+    width: 500px;
+    background-color: #ba79ff30;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(80px);
+    z-index: 1;
+    transition: all linear 0.2s;
+}
+
+#nav{
+    height: 140px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 140px;
+    gap: 60px ;
+    justify-content: flex-start;
+    position: fixed;
+    z-index: 999;
+}
+
+.button-animation{
+    font-weight: 900;
+    font-family: Helvetica_Bold;
+    position: relative;
+    font-size: 2vw;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.button-animation::after{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    transform: scale(0,1);
+    transform-origin: 0% 100%;
+    transition: transform 0.3s ease;
+    background-color: rgb(255, 255, 255);
+}
+
+.button-animation:hover::after{
+    transform: scale(1,1);
+}
+
+#nav img{
+    height: 60px;
+}
+
+/* #nav h4{
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+} */
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+#main{
+    position: relative;
+    background-color:rgba(0, 0, 0, 0.567);
+
+}
+
+#page1{
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+#page1 h1{
+    font-size: 100px;
+    font-weight: 900;
+    position: relative;
+}
+
+#page1 h1::before{
+    content: "EAT PLAY REPEAT";
+    position: absolute;
+    color: black;
+    top: -6px;
+    left: -6px;
+    -webkit-text-stroke: 3px #7b6594;
+    z-index: -1;
+}
+
+#page1 h2{
+    font-size: 25px;
+    font-weight: 900;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#page1 p{
+    font-size: 12px;
+    font-weight: 500;
+    width: 40%;
+}
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+
+#scroller{
+    padding-top: 180px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: none;
+    position: relative;
+    z-index: 10;
+}
+
+#scroller::-webkit-scrollbar {
+    display: none;
+}
+
+#scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroller h4{
+    display: inline-block;
+    font-size: 120px;
+    font-weight: 900;
+    margin-right: 20px;
+    transition: all linear 0.3s;
+    font-family: 'Gilroy-Heavy', sans-serif;
+    color: #0000009b;
+    -webkit-text-stroke: 2px #ba79ff;
+}
+
+#scroller h4:hover{
+    color: #8646d3;
+    -webkit-text-stroke: 3px #d2a8ff;
+
+}
+@keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}
+
+#about-us {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    padding-top: 370px;
+    padding-left: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    justify-content: space-around;
+}
+
+#about-us img {
+    height: 50px;
+    width: 90px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+#about-us-in {
+    width: 50%;
+    text-align: center;
+}
+
+#about-us-in h3 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+#about-us-in h2 {
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+#about-us-in p {
+    font-size: 14px;
+    line-height: 26px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#page3 {
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+    
+}
+
+#page3 h2{
+    font-size: 50px;
+    font-weight: 800;
+    position: relative;
+    text-transform: uppercase;
+    top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#cards-container {
+    position: static;
+    top: 150px;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    position: relative;
+    z-index: 10;
+}
+
+.card {
+    height: 80%;
+    width: 20%;
+    /* border-radius: 20px; */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+#card1 {
+    background-image: url(https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/fob/640/V.jpg);
+}
+
+#card2{
+    background-image: url(https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/fob/640/GTAOnline.jpg);
+}
+
+#card3{
+    background-image: url(https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/fob/640/reddeadredemption2.jpg);
+}
+
+#card4{
+    background-image: url(https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/fob/640/reddeadonline.jpg);
+}
+
+#page3 h4{
+    font-size: 3vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10%;
+}  
+
+#page4 {
+    min-height: 30vh;
+    width: 100%;
+    z-index: 999;
+}
+
+#footer {
+    height: 30vh;
+    width: 100%;
+    position: relative;
+    background-color: #000;
+    z-index: 999;
+    
+}
+
+#Rockstar-logo{
+    height: 20px;
+    padding-top: 11px;
+    padding-left: 65px;
+    position: absolute;
+    display: flex;
+
+
+}
+#f1{
+    position: absolute;
+    display: flex;
+    gap: 70px;
+    padding-top: 55px;
+    padding-left: 80px;
+}
+
+#f1 h4{
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+#arrow-img{
+    position: absolute;
+    display: flex;
+    gap: 180px;
+    padding: 53px 0 0 90px;
+}
+
+#arrow-img-1{
+    height: 15px;
+    position: absolute;
+    display: flex;
+    padding-left: 55px; 
+}
+
+#arrow-img-2{
+    height: 15px;
+    position: absolute;
+    display: flex;
+    padding-left: 233px; 
+}
+
+#arrow-img-3{
+    height: 15px;
+    position: absolute;
+    display: flex;
+    padding-left: 385px; 
+}
+
+#arrow-img-4{
+    height: 15px;
+    position: absolute;
+    display: flex;
+    padding-left: 548px; 
+}
+
+#f2{
+    position: absolute;
+    display: flex;
+    gap: 70px;
+    padding-top: 115px;
+    padding-left: 80px;
+}
+
+#f2 h5{
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(170, 170, 170);
+}
+
+#f3{
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    padding-top: 55px;
+    padding-left: 120px;
+}
+
+#f3 img{
+    height: 20px;
+    width: 20px;
+}
+
+#f4{
+    position: absolute;
+    display: flex;
+    padding-top: 115px;
+    padding-left: 180px;
+}
+
+#logo-1{
+    height: 20px;
+    width: 30px;
+    position: absolute;
+    display: flex;
+}
+
+#logo-2{
+    height: 20px;
+    width: 30px;
+    position: absolute;
+    padding-left: 60px;
+    display: flex;
+}
+
+#logo-3{
+    height: 18px;
+    position: absolute;
+    padding-left: 120px;
+    display: flex;
+}
+
+#logo-4{
+    height: 17px;
+    width: 30px;
+    position: absolute;
+    padding-left: 180px;
+    display: flex;
+}
+
+#logo-5{
+    height: 18px;
+    width: 30px;
+    position: absolute;
+    padding-left: 240px;
+    display: flex;
+}
+
+#f5 h4{
+    font-weight: 200;
+    position: absolute;
+    padding-top: 12px;
+    padding-left: 67px;
+}
