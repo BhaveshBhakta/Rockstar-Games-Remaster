@@ -365,3 +365,140 @@ video{
     height: 1vw;
     width: 1vw;
 }
+
+@media (max-width:600px) {    
+    
+    #nav{
+        gap: 4vw ;
+    }
+    
+    #nav img{
+        height: 4vh;
+    }
+    
+    .button-animation{
+        font-weight: 500;
+        font-size: 2.8vw;
+    }
+    
+    #page1 h1{
+        font-size: 15vw;
+        line-height: 15vw;
+    }
+    
+    #page1 h2{
+        font-size: 4vw;
+        margin-top: 4vw;
+    }
+    
+    #page1 p{
+        font-size: 15px;
+        font-weight: 500;
+        width: 80%;
+        margin-top: 3vw;
+    }
+    
+    #page2 #promo{
+        display: block;
+    }
+    
+    #left-div img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+        object-fit: cover;
+    }
+    
+    #right-div{
+        padding-top: 7vw;
+    }
+    
+    #right-div h2 {
+        padding-left: 2vw;
+        font-size: 5vw;
+        line-height: 14vw;
+    }
+    
+    #right-div p {
+        font-weight: 100;
+        font-size: 5vw;
+        text-align: center;
+        margin-top: 2vw;
+    }
+    
+    #scroller{
+        padding-top: 4vh;
+    }
+    
+    #page3 {
+        padding: 1vw 2vw;
+        min-height: 100vh;
+        width: 100%;
+        z-index: 1;;
+    }
+    
+    #page3 h2{
+        font-size: 8vw;
+        line-height: 1vw;
+    }
+    
+    #cards-container {
+        height: 60vh;
+        gap: 2vh;
+
+    }
+    
+    .card:hover{
+        scale: none;
+    }
+    
+    #page3 h4{
+        font-size: 3vh;
+    }  
+    
+    #footer{
+        padding-top: 3vw;
+        line-height: 11vw;
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #div-right{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3vw;
+    }
+    
+    #div-right h4{
+        font-size: 4vw;
+    }
+    
+    #div-middle{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 1vw;
+
+    }
+    
+    #div-middle img{
+        height: 20vw;
+        width: 30vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 15vw;
+        padding-bottom: 1vw;
+    }
+    
+    #div-left img{
+        height: 4vw;
+        width: 4vw;
+    }
+
+}
